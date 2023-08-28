@@ -39,10 +39,17 @@ docker run -d -p 18443:18443 bigspider/bitcoin_matt
 
 Exposing port 18443 allows interacting with it using `bitcoin-cli -regtest` as normal, as long as a recent version of `bitcoin-cli` is in the path.
 
-Alternatively, once the container is running, one can access
+Alternatively, once the container is running, one can access a terminal in it with:
 
 ```bash
-docker run -d -p 18443:18443 <container_id>
+docker exec -it <container_id> /bin/bash
+```
+
+or run a command directly, for example:
+
+```bash
+docker exec <container_id> bitcoin-cli -regtest getblockcount
+
 ```
 
 ### Configuration
