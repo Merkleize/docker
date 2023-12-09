@@ -27,7 +27,7 @@ docker build -t bitcoin_matt .
 ### Pull from Docker hub
 
 ```bash
-docker pull docker pull bigspider/bitcoin_matt
+docker pull bigspider/bitcoin_matt
 ```
 
 
