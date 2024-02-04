@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     libminiupnpc-dev libnatpmp-dev libsqlite3-dev libtool libzmq3-dev pkg-config \
     python3 systemtap-sdt-dev
 
-RUN git clone -b matt https://github.com/Merkleize/bitcoin /bitcoin
+RUN git clone -b mattplus https://github.com/Merkleize/bitcoin /bitcoin
 
 WORKDIR /bitcoin
 
