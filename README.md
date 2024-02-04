@@ -8,6 +8,8 @@ It contains the same opcodes as the [bitcoin-inquisition](https://github.com/bit
 
 - `OP_CHECKCONTRACTVERIFY`
 - `OP_CAT`
+- `OP_CHECKSIGFROMSTACK`
+- `OP_INTERNALKEY`
 
 See [merkle.fun](https://merkle.fun) for more information.
 
