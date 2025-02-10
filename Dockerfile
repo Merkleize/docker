@@ -1,4 +1,4 @@
-FROM ubuntu:20.04 AS builder
+FROM ubuntu:24.04 AS builder
 
 ENV DEBIAN_FRONTEND=non-interactive
 
@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
     libminiupnpc-dev libnatpmp-dev libsqlite3-dev libtool libzmq3-dev pkg-config \
     python3 systemtap-sdt-dev
 
-RUN git clone -b mattplus https://github.com/Merkleize/bitcoin /bitcoin
+RUN git clone -b checkcontractverify https://github.com/Merkleize/bitcoin /bitcoin
 
 WORKDIR /bitcoin
 
@@ -16,7 +16,7 @@ RUN ./autogen.sh
 RUN ./configure --without-bdb --with-gui=no
 RUN make -j$(nproc)
 
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
 ENV DEBIAN_FRONTEND=non-interactive
 

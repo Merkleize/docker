@@ -4,18 +4,13 @@
 
 This repository contains a Dockerfile to build and run a custom version of Bitcoin, based on the branch `matt` from the repository https://github.com/Merkleize/bitcoin.
 
-It contains the same opcodes as the [bitcoin-inquisition](https://github.com/bitcoin-inquisition/bitcoin) repo, plus the following opcodes on taproot:
-
-- `OP_CHECKCONTRACTVERIFY`
-- `OP_CAT`
-- `OP_CHECKSIGFROMSTACK`
-- `OP_INTERNALKEY`
+It contains the same opcodes as the [bitcoin-inquisition](https://github.com/bitcoin-inquisition/bitcoin) repo (which already includes `OP_CHECKTEMPLATEVERIFY` and `OP_CAT`), plus the `OP_CHECKCONTRACTVERIFY` opcode.
 
 See [merkle.fun](https://merkle.fun) for more information.
 
 ### Features
 
-- Lightweight image based on Ubuntu 20.04.
+- Lightweight image based on Ubuntu 24.04.
 - Compiled with wallet support (no legacy wallet), and no GUI
 - Exposes ports 18443 and 18444.
 - Uses a custom `bitcoin.conf` file.
